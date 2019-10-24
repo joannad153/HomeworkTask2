@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class FoodDetailActivity extends AppCompatActivity {
 
     private Food currentFood;
@@ -65,13 +67,19 @@ public class FoodDetailActivity extends AppCompatActivity {
         quantity.setText(newString);
     }
 
-    public void onClick(View view) {
-        int itemCost = Integer.parseInt(findViewById(R.id.foodCost).toString());
-        int quantity = Integer.parseInt(findViewById(R.id.quantity).toString());
-        int total = itemCost * quantity;
-        Toast.makeText(getApplicationContext(), total, Toast.LENGTH_LONG).show();
-        String toastMessage = "You have added $" + total + " worth of items to your cart";
-        Toast.makeText(FoodDetailActivity.this, toastMessage, Toast.LENGTH_LONG).show();
+    public void addToOrder(View view) {
+        Toast.makeText(getApplicationContext(),
+                "Adding $" + getTotal() + " to your cart",
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public double getTotal() {
+        String sCost = cost.getText().toString();
+        double itemCost = Double.parseDouble(sCost);
+        String sQuant = quantity.getText().toString();
+        int itemQuant = Integer.parseInt(sQuant);
+        double total = itemQuant * itemCost;
+        return total;
     }
 
 }
