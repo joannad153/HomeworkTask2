@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BORGER KONG</string>
+    <string name="foodname">foodName</string>
+    <string name="vieworder">View Order</string>
+    <string name="blank">Place Holder String</string>
+    <string name="addtoorder">Add</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="dollars">$</string>
+    <string name="back">BACK</string>
+    <string name="defaultvalue">1</string>
+    <string name="additem">Add to Order</string>
+    <string name="ordertotal">Order Total</string>
+    <string name="brand">Borger Kong</string>
+    <string name="totalTitle">Order Total:</string>
+    <string name="nullvalue">0</string>
+</resources>
