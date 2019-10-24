@@ -69,7 +69,7 @@ public class FoodDetailActivity extends AppCompatActivity {
 
     public void addToOrder(View view) {
         Toast.makeText(getApplicationContext(),
-                "Adding $" + getTotal() + " to your cart",
+                "Adding $" + String.format("%.2f", getTotal())  + " to your cart",
                 Toast.LENGTH_SHORT).show();
     }
 
